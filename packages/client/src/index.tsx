@@ -8,7 +8,7 @@ import { reportWebVitals } from './reportWebVitals'
 import * as serviceWorker from './serviceWorker'
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql',
+  uri: 'https://travellerlist.herokuapp.com/graphql',
   cache: new InMemoryCache(),
 })
 

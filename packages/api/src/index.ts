@@ -10,7 +10,7 @@ import { getEndpointInfoHTML } from './utils'
 import cors from 'cors'
 
 async function startApolloServer(typeDefs, resolvers) {
-  const PORT = 4000
+  const PORT = process.env.PORT || 8000
   const app = express()
   const httpServer = http.createServer(app)
 
@@ -26,6 +26,10 @@ async function startApolloServer(typeDefs, resolvers) {
     path: '/graphql',
   })
 
+  app.get('/', (req, res) => {
+    res.send('hello world 💪')
+  })
+
   app.use(cors())
   app.use(express.json())
   app.use('/rest/cities', citiesRouter)
@@ -35,8 +39,8 @@ async function startApolloServer(typeDefs, resolvers) {
   app.use(errorHandler)
 
   await new Promise<void>(resolve => httpServer.listen({ port: PORT }, resolve))
-  console.log(`🚀 GraphQL Server ready at http://localhost:${PORT}${server.graphqlPath}`)
-  console.log(`🚀 REST Server ready at http://localhost:${PORT}/rest`)
+  console.log(`🚀 GraphQL Server ready at https://travellerlist.herokuapp.com:${PORT}${server.graphqlPath}`)
+  console.log(`🚀 REST Server ready at https://travellerlist.herokuapp.com:${PORT}`)
 }
 
 startApolloServer(typeDefs, resolvers)

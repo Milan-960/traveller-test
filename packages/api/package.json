@@ -11,9 +11,9 @@
     "url": "git+https://github.com/smartpension/traveller.git"
   },
   "scripts": {
+    "start": "tsc && node build/index.js",
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "dev": "NODE_ENV=development nodemon",
-    "start": "tsc && node build/index.js"
+    "dev": "NODE_ENV=development nodemon"
   },
   "bugs": {
     "url": "https://github.com/smartpension/traveller/issues"
