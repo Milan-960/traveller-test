@@ -2,10 +2,10 @@ import React from 'react'
 import type { FC } from 'react'
 import { ChakraProvider, Box, extendTheme } from '@chakra-ui/react'
 import { Route, Routes } from 'react-router-dom'
-import { TopBar } from './TopBar'
-import { Home } from './Home'
-import { WishList } from './WishList'
-import { Visited } from './Visited'
+import { Home } from './components/Home/Home'
+import { TopBar } from './components/TopBar/TopBar'
+import { WishList } from './components/WishList/WishList'
+import { Visited } from './components/Visited/Visited'
 
 const fonts = {
   heading:

@@ -23,6 +23,13 @@ We have provided both a REST and a GraphQL API, you are free to use whichever yo
 - REST - [http://localhost:4000/rest](http://localhost:4000/rest)
 - GraphQL - [http://localhost:4000/graphql](http://localhost:4000/graphql)
 
+### Prod API
+
+We have provided both a REST and a GraphQL API, you are free to use whichever you are most comfortable with in your solution. You can find documention for these at the following URLS:
+
+- REST - [https://travellerlist.herokuapp.com/rest](https://travellerlist.herokuapp.com/rest)
+- GraphQL - [https://travellerlist.herokuapp.com/graphql](https://travellerlist.herokuapp.com/graphql)
+
 ### Client
 
 After running the client you will find a home page with an input field that is currently non-functional as well an empty wish list and visited pages.
