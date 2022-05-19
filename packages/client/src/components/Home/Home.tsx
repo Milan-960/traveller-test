@@ -2,8 +2,8 @@ import React from 'react'
 import type { FC } from 'react'
 
 import getCites from '../../api/queries/getCities'
-import FormInput from '../FormInput/FormInput'
-import FormTable from '../FormTable/FormTable'
+import { FormInput } from '../FormInput/FormInput'
+import { FormTable } from '../FormTable/FormTable'
 
 import { useLazyQuery } from '@apollo/client'
 import { Container, Heading, Spinner, VStack } from '@chakra-ui/react'

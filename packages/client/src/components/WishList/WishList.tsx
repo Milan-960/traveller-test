@@ -5,7 +5,7 @@ import { useQuery } from '@apollo/client'
 import { Container, Heading, Spinner } from '@chakra-ui/react'
 
 import getCities from '../../api/queries/getCities'
-import FormTable from '../FormTable/FormTable'
+import { FormTable } from '../FormTable/FormTable'
 
 export const WishList: FC = () => {
   const { loading, error, data } = useQuery(getCities, {

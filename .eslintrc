@@ -11,6 +11,7 @@
   "parser": "@typescript-eslint/parser",
   "rules": {
     "@typescript-eslint/no-explicit-any": "off",
+    "import/prefer-default-export": "off",
     "prettier/prettier": "error",
     "semi": "off",
     "@typescript-eslint/semi": ["error", "never"],

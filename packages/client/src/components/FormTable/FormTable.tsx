@@ -49,7 +49,7 @@ export function mutateDetails({ detail, selection, updateAddress }: MutationProp
   console.log('Milan', detail, selection)
 }
 
-const FormTable: React.FC<FormTableProps> = ({ data, total }) => {
+export const FormTable: React.FC<FormTableProps> = ({ data, total }) => {
   const [updateAddress] = useMutation(mutateAddress)
 
   return (
@@ -116,5 +116,3 @@ const FormTable: React.FC<FormTableProps> = ({ data, total }) => {
     </>
   )
 }
-
-export default FormTable

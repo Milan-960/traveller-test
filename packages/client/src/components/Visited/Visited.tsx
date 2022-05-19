@@ -2,7 +2,7 @@ import React from 'react'
 import type { FC } from 'react'
 
 import getCites from '../../api/queries/getCities'
-import FormTable from '../FormTable/FormTable'
+import { FormTable } from '../FormTable/FormTable'
 
 import { useQuery } from '@apollo/client'
 import { Container, Heading, Spinner } from '@chakra-ui/react'
