@@ -7,7 +7,7 @@ type FormProps = {
   initialValues?: string
 }
 
-const FormInput: React.FC<FormProps> = ({ onSubmit }) => {
+export const FormInput: React.FC<FormProps> = ({ onSubmit }) => {
   return (
     <form onSubmit={onSubmit}>
       <InputGroup>
@@ -26,5 +26,3 @@ const FormInput: React.FC<FormProps> = ({ onSubmit }) => {
     </form>
   )
 }
-
-export default FormInput

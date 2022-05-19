@@ -27,7 +27,6 @@ type MutationProps = {
 }
 
 export function mutateDetails({ detail, selection, updateAddress }: MutationProps) {
-  console.log('Milan', detail, selection)
   if (selection == 'visited') {
     updateAddress({
       variables: {
@@ -47,9 +46,10 @@ export function mutateDetails({ detail, selection, updateAddress }: MutationProp
       },
     })
   }
+  console.log('Milan', detail, selection)
 }
 
-const FormTable: React.FC<FormTableProps> = ({ data, total }) => {
+export const FormTable: React.FC<FormTableProps> = ({ data, total }) => {
   const [updateAddress] = useMutation(mutateAddress)
 
   return (
@@ -66,9 +66,9 @@ const FormTable: React.FC<FormTableProps> = ({ data, total }) => {
         </Thead>
         <Tbody>
           {data &&
-            data.map((city: Cities) => {
+            data.map((city: Cities, i) => {
               return (
-                <Tr>
+                <Tr key={i}>
                   <Td>{city.name}</Td>
                   <Td>{city.country}</Td>
                   <Td>{city.id}</Td>
@@ -116,5 +116,3 @@ const FormTable: React.FC<FormTableProps> = ({ data, total }) => {
     </>
   )
 }
-
-export default FormTable

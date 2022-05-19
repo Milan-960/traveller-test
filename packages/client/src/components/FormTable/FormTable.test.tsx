@@ -3,7 +3,7 @@ import { fireEvent, screen } from '@testing-library/react'
 import React from 'react'
 import mutateAddress from '../../api/mutations/mutateAddress'
 import { render } from '../../test-utils'
-import FormTable from './FormTable'
+import { FormTable } from './FormTable'
 
 let createMutationCalled = false
 
