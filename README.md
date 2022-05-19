@@ -47,3 +47,7 @@ We have provided a few packages that will help you in your solution:
 - Functionality tested.
 - An accessible solution.
 - We use TypeScript and would be happy to see a well typed solution, however if you're not comfortable with this feel free to use JavaScript.
+
+```
+npm i --save-dev typescript @typescript-eslint/eslint-plugin@5.6.0 @typescript-eslint/parser@5.6.0 eslint@7.32.0
+```

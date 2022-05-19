@@ -1,5 +1,5 @@
 import { ApolloServer } from 'apollo-server-express'
-import { ApolloServerPluginLandingPageGraphQLPlayground } from 'apollo-server-core'
+import { ApolloServerPluginLandingPageGraphQLPlayground, ApolloServerPluginDrainHttpServer } from 'apollo-server-core'
 import express from 'express'
 import http from 'http'
 import swaggerUi from 'swagger-ui-express'
@@ -22,14 +22,18 @@ async function startApolloServer(typeDefs, resolvers) {
     typeDefs,
     resolvers,
     introspection: process.env.PORT !== 'production',
-    plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
+    plugins: [
+      /* This plugin is from a package that's imported above. */
+      // ApolloServerPluginDrainHttpServer({ httpServer }),
+      ApolloServerPluginLandingPageGraphQLPlayground(),
+    ],
   })
 
   // On production we have to set this plugins
   // const server = new ApolloServer({
   //   typeDefs,
   //   resolvers,
-  //   plugins: [ApolloServerPluginDrainHttpServer({ httpServer })],
+  // ApolloServerPluginDrainHttpServer({ httpServer }),
   // })
 
   await server.start()
@@ -39,7 +43,7 @@ async function startApolloServer(typeDefs, resolvers) {
   })
 
   app.get('/', (req, res) => {
-    res.send('hello world!! 💪 Welcome to the traveller-API')
+    res.send('hello world!! 💪  Welcome to the traveller-API!')
   })
 
   app.use(cors())
@@ -55,8 +59,11 @@ async function startApolloServer(typeDefs, resolvers) {
   // app.use(errorHandler)
 
   await new Promise<void>(resolve => httpServer.listen({ port: PORT }, resolve))
-  console.log(`🚀 GraphQL Server ready at https://travellerlist.herokuapp.com:${PORT}${server.graphqlPath}`)
+  console.log(`🚀 GraphQL Server ready at https://travellerlist.herokuapp.com${server.graphqlPath}`)
   console.log(`🚀 REST Server ready at https://travellerlist.herokuapp.com/rest`)
+
+  // console.log(`🚀 GraphQL Server ready at http://localhost:${PORT}${server.graphqlPath}`)
+  // console.log(`🚀 REST Server ready at http://localhost:${PORT}/rest`)
 }
 
 startApolloServer(typeDefs, resolvers)
