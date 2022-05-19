@@ -1,6 +1,4 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
-  "eslint.workingDirectories": [
-    "../.eslintrc" // replace {PATH_TO_CLIENT} with you own path
-  ]
+  "eslint.workingDirectories": ["../.eslintrc"]
 }

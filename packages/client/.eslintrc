@@ -8,7 +8,7 @@
   },
   "rules": {
     "@typescript-eslint/no-explicit-any": "off",
-    "import/prefer-default-export": "off",
+    "import/prefer-default-export": 2,
     "prettier/prettier": "error",
     "semi": "off",
     "@typescript-eslint/semi": ["error", "never"],
