@@ -8,7 +8,13 @@ export const Home: FC = () => (
     <Heading as="h1">Smart traveller</Heading>
     <Container maxW="container.md">
       <InputGroup>
-        <Input />
+        <Input
+          autoFocus
+          placeholder="search your favorite country!!"
+          type="text"
+          _placeholder={{ color: 'blue.300' }}
+          borderColor="blue.300"
+        />
         <InputRightElement children={<IconButton aria-label="" icon={<Search2Icon />} />} />
       </InputGroup>
     </Container>

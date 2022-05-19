@@ -20,7 +20,7 @@ export const TopBar: FC = () => {
         <Image src={image} alt="smart logo" maxHeight="7" />
       </Link>
 
-      <HStack justifyContent="right" width="100%">
+      <HStack justifyContent="right" spacing="30px" width="100%">
         <ChakraLink as={Link} to="/">
           Home
         </ChakraLink>
