@@ -39,7 +39,7 @@ async function startApolloServer(typeDefs, resolvers) {
   })
 
   app.get('/', (req, res) => {
-    res.send('hello world!! 💪')
+    res.send('hello world!! 💪 Welcome to the traveller-API')
   })
 
   app.use(cors())
