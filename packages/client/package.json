@@ -2,6 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://milan-960.github.io/traveller-test",
   "dependencies": {
     "@apollo/client": "^3.5.5",
     "@chakra-ui/icons": "^1.1.1",
