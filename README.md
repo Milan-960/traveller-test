@@ -25,7 +25,7 @@ We have provided both a REST and a GraphQL API, you are free to use whichever yo
 
 ### Prod API
 
-We have provided both a REST and a GraphQL API, you are free to use whichever you are most comfortable with in your solution. You can find documention for these at the following URLS:
+We have provided both a REST and a GraphQL API hosted on the server, you are free to use whichever you are most comfortable with in your solution. You can find documention for these at the following URLS:
 
 - REST - [https://travellerlist.herokuapp.com/rest](https://travellerlist.herokuapp.com/rest)
 - GraphQL - [https://travellerlist.herokuapp.com/graphql](https://travellerlist.herokuapp.com/graphql)
@@ -48,6 +48,13 @@ We have provided a few packages that will help you in your solution:
 - An accessible solution.
 - We use TypeScript and would be happy to see a well typed solution, however if you're not comfortable with this feel free to use JavaScript.
 
+### Use this command to solve eslint errors!
+
 ```
 npm i --save-dev typescript @typescript-eslint/eslint-plugin@5.6.0 @typescript-eslint/parser@5.6.0 eslint@7.32.0
 ```
+
+<img src="./img/home.png" alt="home" />
+<p>&nbsp;</p>
+
+<img src="./img/wishlist.png" alt="wishlist" />
